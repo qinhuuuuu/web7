@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: normal;
+    font-weight: 100;
+    src: local('SVN Avenirnext Thin'), url("SVN-Avenir Next Thin.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: italic;
+    font-weight: 100;
+    src: local('SVN Avenirnext Thin Italic'), url("SVN-Avenir Next Thin Italic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: normal;
+    font-weight: 200;
+    src: local('SVN Avenirnext XLight'), url("SVN-Avenir Next XLight.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: italic;
+    font-weight: 200;
+    src: local('SVN Avenirnext XLight Italic'), url("SVN-Avenir Next XLight Italic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: normal;
+    font-weight: 300;
+    src: local('SVN Avenirnext Light'), url("SVN-Avenir Next Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: italic;
+    font-weight: 300;
+    src: local('SVN Avenirnext Light Italic'), url("SVN-Avenir Next Light Italic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: normal;
+    font-weight: 400;
+    src: local('SVN Avenirnext Regular'), url("SVN-Avenir Next Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: italic;
+    font-weight: 400;
+    src: local('SVN Avenirnext Italic'), url("SVN-Avenir Next Italic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: normal;
+    font-weight: 450;
+    src: local('SVN Avenirnext Medium'), url("SVN-Avenir Next Medium.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: italic;
+    font-weight: 450;
+    src: local('SVN Avenirnext Medium Italic'), url("SVN-Avenir Next Medium Italic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: normal;
+    font-weight: 600;
+    src: local('SVN Avenirnext SemiBold'), url("SVN-Avenir Next DemiBold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: italic;
+    font-weight: 600;
+    src: local('SVN Avenirnext SemiBold Italic'), url("SVN-Avenir Next DemiBold Italic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: normal;
+    font-weight: 700;
+    src: local('SVN Avenirnext Bold'), url("SVN-Avenir Next Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: italic;
+    font-weight: 700;
+    src: local('SVN Avenirnext Bold Italic'), url("SVN-Avenir Next Bold Italic.ttf") format('truetype');
+}
+
+/* @font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: normal;
+    font-weight: 800;
+    src: local('SVN Avenirnext Bold'), url("BeVietnam-ExtraBold.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: italic;
+    font-weight: 800;
+    src: local('SVN Avenirnext Bold Italic'), url("BeVietnam-ExtraBoldItalic.ttf") format('truetype');
+} */
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: normal;
+    font-weight: 900;
+    src: local('SVN Avenirnext Heavy'), url("SVN-Avenir Next Heavy.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'SVN Avenirnext';
+    font-style: italic;
+    font-weight: 900;
+    src: local('SVN Avenirnext Heavy Italic'), url("SVN-Avenir Next Heavy Italic.ttf") format('truetype');
+}

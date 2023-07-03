@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '../fonts/svn/style.css';
+@import '../fonts/font-icon/style.css';
+
+@layer utilities {
+    .sub-dropdown:hover>.sub-dropdown-content {
+        @apply visible;
+    }
+
+    .sub-dropdown:hover>.sub-dropdown-title {
+        @apply text-primary-1;
+    }
+}
+
+@layer utilities {
+    @variants responsive {
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    }
+
+}
+
+.show {
+    display: block;
+}
+
+
+
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+// #menu-content.hidden {
+//     @apply animate-fade-right-menu;
+// }
