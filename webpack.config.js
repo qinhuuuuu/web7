@@ -63,6 +63,7 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+
   },
   optimization: {
     usedExports: true,
@@ -80,7 +81,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jquery: "jQuery",
-      "window.jQuery": "jquery"
+      "window.jQuery": "jquery",
+
     }),
 
     new HtmlWebpackPlugin({

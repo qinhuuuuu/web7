@@ -1,5 +1,6 @@
+import counterUp from 'counterup2'
+import Waypoint from 'waypoints/lib/noframework.waypoints';
 import "../scss/index.scss";
-
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
@@ -7,27 +8,52 @@ window.onbeforeunload = function () {
 // menu
 var menuBtn = document.querySelector('#menu-btn');
 var menuContent = document.getElementById('menu-content');
-var menuContents = document.getElementById('menu-contents');
-var main = document.querySelector('main');
-var footer = document.querySelector('footer');
+
 menuBtn.onclick = function () {
   menuContent.classList.toggle("show");
   document.body.classList.toggle("no-scroll");
-  menuContents.classList.add("animate-fade-left-menu");
-  menuContents.classList.remove("animate-fade-right-menu");
-  menuContent.classList.remove("-left-[100%]");
-  menuContent.classList.add("left-0");
 }
 var closeBtn = document.querySelector('.close');
 closeBtn.onclick = function () {
-  // menuContents.classList.add("animate-fade-right-menu");
-  // menuContents.classList.remove("animate-fade-left-menu");
-  menuContent.classList.remove("left-0");
-  menuContent.classList.add("-left-[100%]");
   menuContent.classList.toggle("show");
+  document.body.classList.toggle("no-scroll");
 }
-var dropdownBtn = document.querySelector('.dropdown-btn');
-var dropdownContent = document.querySelector('.dropdown-content');
-dropdownBtn.onclick = function () {
-  dropdownContent.classList.add("flex");
+var dropdownBtn = document.querySelectorAll('.dropdown-btn');
+var dropdownContent = document.querySelectorAll('.dropdown-content');
+for (let i = 0; i < dropdownBtn.length; i++) {
+  dropdownBtn[i].onclick = function () {
+    let btnOpenTinTuc = document.querySelectorAll('.btn-open-tin-tuc');
+    btnOpenTinTuc[i].classList.toggle('twi-7-arrow-down-line');
+    btnOpenTinTuc[i].classList.toggle('twi-7-arrow-left-line');
+    dropdownContent[i].classList.toggle("flex");
+  }
 }
+// const counterHome = document.querySelector('.counter-home');
+// counterUp(counterHome, {
+//   duration: 1000,
+//   delay: 16,
+// })
+function countStart() {
+  const $counters = document.querySelectorAll(".js-count-up"),
+    options = {
+      useEasing: true,
+      useGrouping: true,
+      separator: ",",
+      decimal: "."
+    };
+
+  $counters.forEach((item) => {
+    const value = item.dataset.value;
+    const counter = new CountUp(item, value, options);
+    counter.start();
+  });
+}
+
+new Waypoint({
+  element: document.querySelector('.level'),
+  handler: function () {
+    countStart()
+    //this.destroy() //for once
+  },
+  offset: '50%'
+});

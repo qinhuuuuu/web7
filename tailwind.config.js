@@ -29,9 +29,9 @@ const COLORS = {
     500: "#DA072D",
   },
   primary: {
-    1: '#0062BD',
-    2: '#0085FF',
-    3: '#6BB8FF',
+    1: '#146cda',
+    2: '#0b5fc8',
+    3: '#5398ef',
   },
   secondary: {
     1: '#f8fafc',
@@ -161,21 +161,37 @@ module.exports = {
       },
       keyframes: {
         'fade-left-menu': {
-          '0%': { transform: 'translateX(-73.91%)' },
+          '0%': { transform: 'translateX(-306px)' },
           '100%': { transform: 'translateX(0)' },
         },
-        'fade-right-menu': {
-          '0%': { transform: 'translateX(73.91%)' },
-          '100%': { transform: 'translateX(0)' },
-        }
+        // 'fade-right-menu': {
+        //   '0%': { transform: 'translateX(0)' },
+        //   '100%': { transform: 'translateX(-306px)' },
+        // }
       },
       animation: {
-        'fade-left-menu': 'fade-left-menu 0.3s ease-in-out ',
-        'fade-right-menu': 'fade-right-menu 0.3s ease-in-out ',
+        'fade-left-menu': 'fade-left-menu 0.3s linear alternate ',
+        // 'fade-right-menu': 'fade-right-menu 0.3s linear alternate',
       },
       boxShadow: {
         'box-shadow-tin-tuc': "0px 1px 10px 0px rgba(29, 45, 73, 0.10)",
       },
+      backgroundImage: {
+        'dich-vu': 'linear-gradient(81deg, rgba(242, 242, 242, 0.94) 0%, rgba(242, 242, 242, 0.00) 100%), linear-gradient(176deg, #F2F2F2 5.39%, rgba(255, 255, 255, 0.00) 98.47%),url("../img/home/dich-vu/bg-dich-vu.jpg")',
+      },
+      backgroundPosition: {
+        // 'left-top': '90.903px -106.438px',
+        // 'lightgray': '723.1px -106.438px',
+
+      },
+      backgroundSize: {
+        // 'dich-vu': '1917px 846px',
+        // 'lightgray': '66.361% 115.939%',
+      },
+      aspectRatio: {
+        '1917/846': '1917/846',
+        '834/846': '834/846',
+      }
     },
   },
   variants: {
