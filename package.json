@@ -46,9 +46,8 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "counterup2": "^2.0.2",
     "jquery": "^3.7.0",
     "jquery-min": "^0.0.2",
-    "waypoints": "^4.0.1"
+    "slick-carousel": "^1.8.1"
   }
 }

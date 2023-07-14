@@ -160,37 +160,53 @@ module.exports = {
       backgroundImage: {
       },
       keyframes: {
-        'fade-left-menu': {
-          '0%': { transform: 'translateX(-306px)' },
-          '100%': { transform: 'translateX(0)' },
-        },
+        // 'fade-left-menu': {
+        //   '0%': { transform: 'translateX(-306px)' },
+        //   '100%': { transform: 'translateX(0)' },
+        // },
         // 'fade-right-menu': {
         //   '0%': { transform: 'translateX(0)' },
         //   '100%': { transform: 'translateX(-306px)' },
-        // }
+        // },
+        'fade-left-dich-vu': {
+          '0%': { opacity: 0, transform: 'translateX(-120px)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+        'fade-right-dich-vu': {
+          '0%': { opacity: 0, transform: 'translateX(120px)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+        'move-in-up': {
+          '0%': { opacity: 0, transform: 'rotateY(-120deg) translateY(120px)' },
+          '100%': { opacity: 1, transform: 'rotateY(0deg) translateY(0)' },
+        }
       },
       animation: {
-        'fade-left-menu': 'fade-left-menu 0.3s linear alternate ',
-        // 'fade-right-menu': 'fade-right-menu 0.3s linear alternate',
+        // 'fade-left-menu': 'fade-left-menu',
+        // 'fade-right-menu': 'fade-right-menu',
+        'fade-left-dich-vu': 'fade-left-dich-vu 0.5s ease-in',
+        'fade-right-dich-vu': 'fade-right-dich-vu 0.5s ease-in',
+        'move-in-up': 'move-in-up 1.2s ease-in-out 0s',
       },
       boxShadow: {
         'box-shadow-tin-tuc': "0px 1px 10px 0px rgba(29, 45, 73, 0.10)",
+        'menu': '0px 4px 4px 0px rgba(20, 108, 218, 0.03)',
+        'cam-nhan-khach-hang': '0px 0px 9px 0px rgba(20, 108, 218, 0.10);',
+        'btn-lien-he-ngay': '0px 10px 10px 0px rgba(20, 108, 218, 0.15)',
       },
       backgroundImage: {
-        'dich-vu': 'linear-gradient(81deg, rgba(242, 242, 242, 0.94) 0%, rgba(242, 242, 242, 0.00) 100%), linear-gradient(176deg, #F2F2F2 5.39%, rgba(255, 255, 255, 0.00) 98.47%),url("../img/home/dich-vu/bg-dich-vu.jpg")',
-      },
-      backgroundPosition: {
-        // 'left-top': '90.903px -106.438px',
-        // 'lightgray': '723.1px -106.438px',
+        'dich-vu': 'url("../img/home/dich-vu/bg-dich-vu.png")',
+        'banner-homepage': 'linear-gradient(0deg, rgba(17, 24, 39, 0.85) 0%, rgba(17, 24, 39, 0.85) 100%), url("/src/img/home/banner/bg-banner.jpg")',
 
       },
-      backgroundSize: {
-        // 'dich-vu': '1917px 846px',
-        // 'lightgray': '66.361% 115.939%',
-      },
+
       aspectRatio: {
         '1917/846': '1917/846',
         '834/846': '834/846',
+        '322/247': '322/247',
+        '176/132': '176/132',
+        '4': '4',
+        '149/28': '149/28',
       }
     },
   },

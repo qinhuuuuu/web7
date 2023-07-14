@@ -82,7 +82,6 @@ module.exports = {
       $: "jquery",
       jquery: "jQuery",
       "window.jQuery": "jquery",
-
     }),
 
     new HtmlWebpackPlugin({

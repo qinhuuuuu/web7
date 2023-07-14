@@ -34,6 +34,15 @@
 
 }
 
+// menu
+.animate-menu {
+    @apply translate-x-[-306px] duration-300 ease-linear transition-all;
+
+    &.fade-left-menu {
+        @apply translate-x-0;
+    }
+}
+
 .show {
     display: block;
 }
@@ -44,4 +53,72 @@
 
 .flex {
     display: flex;
+}
+
+// slide cam-nhan-khach-hang
+.slide-cam-nhan-khach-hang {
+
+    .slick-dots {
+        @apply flex justify-center
+    }
+
+
+    .slick-slide {
+        @apply px-3;
+
+        // &.active {
+        //     @apply scale-110 duration-200 ease-in-out transition-all visible opacity-100
+        // }
+        // &:hover {
+        //     @apply scale-110 delay-100 duration-200
+        // }
+    }
+
+    .slick-track {
+        @apply flex justify-center overflow-visible
+    }
+
+    .slick-dots .slick-active>div {
+        @apply bg-primary-1
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .slide-cam-nhan-khach-hang {
+        .slick-slide {
+            @apply px-[15px]
+        }
+    }
+}
+
+// tin-tuc
+
+
+.the-last-tin-tuc .border-tin-tuc {
+    @apply hidden
+}
+
+@media only screen and (min-width: 768px) {
+    .item-tin-tuc {
+        @apply flex-row gap-4;
+
+        .img-tin-tuc {
+            @apply w-[174px]
+        }
+
+
+        p {
+            @apply hidden;
+        }
+    }
+
+    .item-tin-tuc .border-tin-tuc {
+        @apply hidden
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .the-main-tin-tuc .border-tin-tuc {
+        @apply hidden
+    }
 }
