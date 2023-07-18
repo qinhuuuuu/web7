@@ -18,6 +18,10 @@ module.exports = {
       import: './src/js/index.js',
       filename: 'js/index.js'
     },
+    news: {
+      import: './src/js/news.js',
+      filename: 'js/news.js'
+    },
   },
   output: {
     publicPath: basePath,
@@ -83,7 +87,6 @@ module.exports = {
       jquery: "jQuery",
       "window.jQuery": "jquery",
     }),
-
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/views/index.html',
@@ -96,10 +99,14 @@ module.exports = {
       inject: "body",
       chunks: ['index'],
     }),
-
+    new HtmlWebpackPlugin({
+      filename: 'news.html',
+      template: './src/views/news.html',
+      // inject: "body",
+      chunks: ['news'],
+    }),
     new MiniCssExtractPlugin({
       filename: "css/[name].min.css",
     }),
-
   ],
 };

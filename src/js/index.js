@@ -25,11 +25,10 @@ closeBtn.onclick = function () {
   // menuContents.classList.add("animate-fade-right-menu");
   document.body.classList.toggle("no-scroll");
 }
-var dropdownBtn = document.querySelectorAll('.dropdown-btn');
+var btnOpenTinTuc = document.querySelectorAll('.btn-open-tin-tuc');
 var dropdownContent = document.querySelectorAll('.dropdown-content');
-for (let i = 0; i < dropdownBtn.length; i++) {
-  dropdownBtn[i].onclick = function () {
-    let btnOpenTinTuc = document.querySelectorAll('.btn-open-tin-tuc');
+for (let i = 0; i < btnOpenTinTuc.length; i++) {
+  btnOpenTinTuc[i].onclick = function () {
     btnOpenTinTuc[i].classList.toggle('twi-7-arrow-down-line');
     btnOpenTinTuc[i].classList.toggle('twi-7-arrow-left-line');
     dropdownContent[i].classList.toggle("flex");
@@ -160,3 +159,31 @@ function animateTinTuc(scrollTop) {
     }
   } isScrolled = true;
 }
+//  about page
+// section 3 - ban quan ly cua chung toi
+$('.slide-ban-quan-ly').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  mobileFirst: true,
+  dots: true,
+  customPaging: function (slider, i) {
+    return '<div class="w-2 h-2 bg-[#D9D9D9] rounded-full mt-7 md:mt-5 xl:mt-10"></div>';
+  },
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        dots: false,
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 1279,
+      settings: {
+        slidesToShow: 3,
+        variableWidth: true
+      }
+    },
+  ]
+});

@@ -81,6 +81,10 @@
     .slick-dots .slick-active>div {
         @apply bg-primary-1
     }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -120,5 +124,53 @@
 @media only screen and (min-width: 1280px) {
     .the-main-tin-tuc .border-tin-tuc {
         @apply hidden
+    }
+}
+
+// about page
+// slide ban quan ly cua chung toi
+.slide-ban-quan-ly {
+    .slick-dots {
+        @apply flex justify-center bottom-0 -mb-5
+    }
+
+    .slick-slide {
+        @apply mx-[58px];
+    }
+
+    .slick-track {
+        @apply flex
+    }
+
+    .slick-dots .slick-active>div {
+        @apply bg-primary-1
+    }
+
+    .slick-dotted.slick-slider {
+        @apply mb-0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .slide-ban-quan-ly {
+        .slick-slide {
+            @apply ml-10 mr-0;
+        }
+
+        .slick-track {
+            @apply justify-center gap-[30px];
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .slide-ban-quan-ly {
+        .slick-slide {
+            @apply ml-8;
+        }
+
+        .slick-track {
+            @apply gap-0;
+        }
     }
 }
