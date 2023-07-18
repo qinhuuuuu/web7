@@ -197,7 +197,7 @@ module.exports = {
       backgroundImage: {
         'dich-vu': 'url("../img/home/dich-vu/bg-dich-vu.png")',
         'banner-homepage': 'linear-gradient(0deg, rgba(17, 24, 39, 0.85) 0%, rgba(17, 24, 39, 0.85) 100%), url("/src/img/home/banner/bg-banner.jpg")',
-
+        'banner-tin-tuc': 'url("../img/about/banner-tin-tuc/bg-banner.png")',
       },
 
       aspectRatio: {

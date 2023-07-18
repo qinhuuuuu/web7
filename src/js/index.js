@@ -41,6 +41,14 @@ $(window).scroll(function () {
   animateCamNhanKH(scrollTop);
   animateTinTuc(scrollTop);
 });
+// dich-vu
+
+
+// $('.scroll-to-discover').click(function () {
+//   console.log(12312);
+//   $('html, body').animate({ scrollTop: $('#section-2').offset().top }, 'slow');
+// });
+
 // gioi-thieu
 function animateDichVu(scrollTop) {
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -53,25 +61,25 @@ function animateDichVu(scrollTop) {
       if (screenWidth > 1280) {
         if (scrollTop > animateLeftDichVu.offsetTop - 550) {
           animateLeftDichVu.classList.remove('invisible');
-          animateLeftDichVu.classList.add('animate-fade-left-dich-vu');
+          animateLeftDichVu.classList.add('xl:animate-fade-left-dich-vu');
           counter();
           firstScrolledLeft = true;
         }
         if (scrollTop > animateRightDichVu.offsetTop - 661) {
           animateRightDichVu.classList.remove('invisible');
-          animateRightDichVu.classList.add('animate-fade-right-dich-vu');
+          animateRightDichVu.classList.add('xl:animate-fade-right-dich-vu');
           firstScrolledRight = true;
         }
       } else {
         if (scrollTop > animateLeftDichVu.offsetTop - 289) {
           animateLeftDichVu.classList.remove('invisible');
-          animateLeftDichVu.classList.add('animate-fade-left-dich-vu');
+          animateLeftDichVu.classList.add('xl:animate-fade-left-dich-vu');
           counter();
           firstScrolledLeft = true;
         }
         if (scrollTop > animateRightDichVu.offsetTop - 400) {
           animateRightDichVu.classList.remove('invisible');
-          animateRightDichVu.classList.add('animate-fade-right-dich-vu');
+          animateRightDichVu.classList.add('xl:animate-fade-right-dich-vu');
           firstScrolledRight = true;
         }
       }
@@ -131,15 +139,14 @@ function animateCamNhanKH(scrollTop) {
   if (!firstScrolledRight) {
     if (scrollTop > rightCamNhanKH.offsetTop - 750) {
       rightCamNhanKH.classList.remove('invisible');
-      rightCamNhanKH.classList.add('animate-fade-right-dich-vu');
+      rightCamNhanKH.classList.add('xl:animate-fade-right-dich-vu');
       for (let i = 0; i < itemSlideCamNhanKH.length; i++) {
         itemSlideCamNhanKH[i].classList.remove('invisible');
-        itemSlideCamNhanKH[i].classList.add('animate-move-in-up');
+        itemSlideCamNhanKH[i].classList.add('xl:animate-move-in-up');
       }
       firstScrolledRight = true;
     }
   }
-
 }
 // tin tuc
 function animateTinTuc(scrollTop) {
