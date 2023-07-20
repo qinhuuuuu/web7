@@ -27,7 +27,7 @@
                 <div id="menu-content"
                     class="hidden absolute top-0 left-0 bg-black/80 w-screen h-screen  md:h-[93.85vh]">
                     <div id="menu-contents"
-                        class="flex flex-col gap-[69px] transition-all animate-menu px-4 w-[306px] h-full bg-white overflow-scroll no-scrollbar ">
+                        class="flex flex-col gap-[69px] transition-all ease-out px-4 w-[306px] h-full bg-white overflow-scroll no-scrollbar">
                         <div class="flex justify-between mt-6 md:mt-7">
                             <a href="index.html" class=""> <img class="aspect-4" src="../img/header-footer/logo.png"
                                     alt=""></a>
@@ -60,7 +60,7 @@
                             <li><a href="#" class="hover:text-primary-1">Liên hệ</a></li>
                             <li class="hidden md:block">
                                 <div class=" items-center flex cursor-pointer dropdown-btn">
-                                    <a href="#" class="">Tin tức</a>
+                                    <a href="news.html" class="">Tin tức</a>
                                     <i class="btn-open-tin-tuc twi-7-arrow-left-line text-[24px]"></i>
                                 </div>
                                 <ul class="mt-[14px] ml-3 flex-col gap-[26px] hidden dropdown-content ">
@@ -166,7 +166,7 @@
                     </div>
                 </div>
                 <div class="hidden xl:flex justify-center text-neutral-1-900 ">
-                    <a href="#section-2" class="scroll-to-discover flex gap-2.5 items-center8">
+                    <a href="#section-2" class="scroll-to-discover flex gap-2.5">
                         <span class=" font-semibold">Scroll to Discover</span>
                         <i class="twi-7-down-line text-[24px]"></i>
                     </a>
@@ -189,7 +189,7 @@
                         <div class="border-solid border-border border-b pb-[22px] md:pb-10">
                             <div class="flex items-center gap-2">
                                 <div class="w-[17px] h-[1px] bg-primary-1"></div>
-                                <span class="text-primary-1 font-medium text-body-1">Giới thiệu</span>
+                                <a href="about.html" class="text-primary-1 font-medium text-body-1">Giới thiệu</a>
                             </div>
                             <div class="mt-4 text-neutral-1-900 text-heading-3 font-semibold md:mt-2.5">Vateco là doanh
                                 nghiệp như
@@ -346,7 +346,7 @@
             <div class="px-4 py-[60px] mx-auto w-full md:py-[100px] xl:py-[120px] xl:max-w-7xl lg:px-2 2xl:px-0">
                 <div class=" flex items-center gap-2">
                     <div class="w-[17px] h-[1px] bg-primary-1"></div>
-                    <span class="text-primary-1 font-medium text-body-1">Tin tức</span>
+                    <a href="news.html" class="text-primary-1 font-medium text-body-1">Tin tức</a>
                 </div>
                 <h3 class=" text-neutral-1-900 text-heading-3 font-semibold mt-2.5 md:text-heading-2">
                     Một số
@@ -376,8 +376,8 @@
                             <div class="w-full h-[1px] bg-border my-[30px] border-tin-tuc"></div>
                         </div>
                     </div>
-                    <div class="flex flex-col md:gap-11 xl:w-1/2">
-                        <div class="flex flex-col w-full gap-[34px] item-tin-tuc">
+                    <ul class="flex flex-col md:gap-11 xl:w-1/2">
+                        <li class="flex flex-col w-full gap-[34px] item-tin-tuc">
                             <div class="overflow-hidden">
                                 <img class="aspect-video rounded w-full img-tin-tuc  hover:scale-110 duration-300 cursor-pointer"
                                     src="../img/home/tin-tuc/tin-tuc-tang-gia-nguyen-vat-lieu.jpg" alt="">
@@ -399,8 +399,8 @@
                                     printing ets and typesetting industry. Lorem Ipsum has been the industry's </p>
                                 <div class="w-full h-[1px] bg-border my-[30px] border-tin-tuc"></div>
                             </div>
-                        </div>
-                        <div class="flex flex-col w-full gap-[34px] item-tin-tuc">
+                        </li>
+                        <li class="flex flex-col w-full gap-[34px] item-tin-tuc">
                             <div class="overflow-hidden">
                                 <img class="aspect-video rounded w-full img-tin-tuc  hover:scale-110 duration-300 cursor-pointer"
                                     src="../img/home/tin-tuc/tin-tuc-tang-gia-nguyen-vat-lieu.jpg" alt="">
@@ -422,8 +422,8 @@
                                     printing ets and typesetting industry. Lorem Ipsum has been the industry's </p>
                                 <div class="w-full h-[1px] bg-border my-[30px] border-tin-tuc"></div>
                             </div>
-                        </div>
-                        <div class="flex flex-col w-full gap-[34px] item-tin-tuc">
+                        </li>
+                        <li class="flex flex-col w-full gap-[34px] item-tin-tuc">
                             <div class="overflow-hidden">
                                 <img class="aspect-video rounded w-full img-tin-tuc  hover:scale-110 duration-300 cursor-pointer"
                                     src="../img/home/tin-tuc/tin-tuc-tang-gia-nguyen-vat-lieu.jpg" alt="">
@@ -445,9 +445,9 @@
                                     printing ets and typesetting industry. Lorem Ipsum has been the industry's </p>
                                 <div class="w-full h-[1px] bg-border my-[30px] border-tin-tuc"></div>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="flex flex-col w-full gap-[34px] the-last-tin-tuc  item-tin-tuc">
+                        <li class="flex flex-col w-full gap-[34px] the-last-tin-tuc  item-tin-tuc">
                             <div class="overflow-hidden">
                                 <img class="aspect-video rounded w-full img-tin-tuc  hover:scale-110 duration-300 cursor-pointer"
                                     src="../img/home/tin-tuc/tin-tuc-tang-gia-nguyen-vat-lieu.jpg" alt="">
@@ -469,9 +469,9 @@
                                     printing ets and typesetting industry. Lorem Ipsum has been the industry's </p>
                                 <div class="w-full h-[1px] bg-border my-[30px] border-tin-tuc"></div>
                             </div>
-                        </div>
+                        </li>
 
-                    </div>
+                    </ul>
                 </div>
                 <div
                     class="flex mx-auto text-primary-1 w-fit gap-1 border-solid border-b-2 pb-1 border-primary-1 mt-[54px] xl:mt-16">
@@ -534,7 +534,7 @@
                         <h1 class="text-heading-5 font-semibold  text-white">vateco.com</h1>
                         <div class="flex gap-[70px] text-white text-body-1 font-normal xl:flex-col xl:gap-4">
                             <div>
-                                <a href="#" class="hover:text-primary-3 duration-300">Giới thiệu</a>
+                                <a href="about.html" class="hover:text-primary-3 duration-300">Giới thiệu</a>
                             </div>
                             <div>
                                 <a href="#" class="hover:text-primary-3 duration-300">Dự án</a>

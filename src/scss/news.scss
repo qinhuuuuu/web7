@@ -1,0 +1,36 @@
+.border-tin-tuc {
+    @apply hidden
+}
+
+@media only screen and (min-width: 768px) {
+    .item-tin-tuc {
+        // @apply flex-col;
+
+        .img-tin-tuc {
+            @apply w-full
+        }
+
+        p {
+            @apply block;
+        }
+    }
+
+
+}
+
+
+@media only screen and (min-width: 1280px) {
+    .item-tin-tuc {
+        // @apply flex-col;
+
+        .img-tin-tuc {
+            @apply w-20
+        }
+
+        p {
+            @apply hidden;
+        }
+    }
+
+
+}

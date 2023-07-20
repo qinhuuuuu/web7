@@ -22,6 +22,10 @@ module.exports = {
       import: './src/js/news.js',
       filename: 'js/news.js'
     },
+    about: {
+      import: './src/js/about.js',
+      filename: 'js/about.js'
+    },
   },
   output: {
     publicPath: basePath,
@@ -97,13 +101,13 @@ module.exports = {
       filename: 'about.html',
       template: './src/views/about.html',
       inject: "body",
-      chunks: ['index'],
+      chunks: ['about', 'index'],
     }),
     new HtmlWebpackPlugin({
       filename: 'news.html',
       template: './src/views/news.html',
-      // inject: "body",
-      chunks: ['news'],
+      inject: "body",
+      chunks: ['news', 'index'],
     }),
     new MiniCssExtractPlugin({
       filename: "css/[name].min.css",

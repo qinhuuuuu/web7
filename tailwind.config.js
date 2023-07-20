@@ -160,14 +160,14 @@ module.exports = {
       backgroundImage: {
       },
       keyframes: {
-        // 'fade-left-menu': {
-        //   '0%': { transform: 'translateX(-306px)' },
-        //   '100%': { transform: 'translateX(0)' },
-        // },
-        // 'fade-right-menu': {
-        //   '0%': { transform: 'translateX(0)' },
-        //   '100%': { transform: 'translateX(-306px)' },
-        // },
+        'fade-left-menu': {
+          '0%': { opacity: 0, transform: 'translateX(-100%)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+        'fade-right-menu': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
         'fade-left-dich-vu': {
           '0%': { opacity: 0, transform: 'translateX(-120px)' },
           '100%': { opacity: 1, transform: 'translateX(0)' },
@@ -182,12 +182,15 @@ module.exports = {
         }
       },
       animation: {
-        // 'fade-left-menu': 'fade-left-menu',
-        // 'fade-right-menu': 'fade-right-menu',
+        'fade-left-menu': 'fade-left-menu 0.5s',
+        'fade-right-menu': 'fade-right-menu 0.5s',
         'fade-left-dich-vu': 'fade-left-dich-vu 0.5s ease-in',
         'fade-right-dich-vu': 'fade-right-dich-vu 0.5s ease-in',
         'move-in-up': 'move-in-up 1.2s ease-in-out 0s',
       },
+      // animationDelay: {
+      //   'fade-right-menu': '1s',
+      // },
       boxShadow: {
         'box-shadow-tin-tuc': "0px 1px 10px 0px rgba(29, 45, 73, 0.10)",
         'menu': '0px 4px 4px 0px rgba(20, 108, 218, 0.03)',

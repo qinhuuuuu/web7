@@ -14,16 +14,21 @@ var menuContents = document.getElementById('menu-contents');
 
 menuBtn.onclick = function () {
   menuContent.classList.toggle("show");
-  // menuContents.classList.remove("animate-fade-right-menu");
-  menuContents.classList.add("fade-left-menu");
+  menuContents.classList.remove("animate-fade-right-menu");
+  menuContents.classList.add("animate-fade-left-menu");
+  // menuContents.classList.add("open");
   document.body.classList.toggle("no-scroll");
 }
 var closeBtn = document.querySelector('.close');
 closeBtn.onclick = function () {
-  menuContent.classList.toggle("show");
-  menuContents.classList.remove("fade-left-menu");
-  // menuContents.classList.add("animate-fade-right-menu");
+  menuContents.classList.remove("animate-fade-left-menu");
+  menuContents.classList.add("animate-fade-right-menu");
+  // menuContents.classList.remove("open");
   document.body.classList.toggle("no-scroll");
+
+  setTimeout(() => {
+    menuContent.classList.toggle("show");
+  }, 300)
 }
 var btnOpenTinTuc = document.querySelectorAll('.btn-open-tin-tuc');
 var dropdownContent = document.querySelectorAll('.dropdown-content');
@@ -42,7 +47,13 @@ $(window).scroll(function () {
 });
 // dich-vu
 
-
+// scroll to discover
+$(function () {
+  $('.scroll-to-discover').click(function () {
+    $('html, body').animate({ scrollTop: $('#section-2').offset().top }, 'slow');
+    return false;
+  });
+});
 // $('.scroll-to-discover').click(function () {
 //   console.log(12312);
 //   $('html, body').animate({ scrollTop: $('#section-2').offset().top }, 'slow');
@@ -53,16 +64,18 @@ function animateDichVu(scrollTop) {
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   let firstScrolledRight = false;
   let firstScrolledLeft = false;
-  let animateLeftDichVu = document.querySelector('.animate-left-dich-vu');
+  let animateLeftDichVu = document.querySelectorAll('.animate-left-dich-vu');
   let animateRightDichVu = document.querySelector('.animate-right-dich-vu');
   if (!firstScrolledLeft) {
     if (!firstScrolledRight) {
       if (screenWidth > 1280) {
-        if (scrollTop > animateLeftDichVu.offsetTop - 550) {
-          animateLeftDichVu.classList.remove('invisible');
-          animateLeftDichVu.classList.add('xl:animate-fade-left-dich-vu');
-          counter();
-          firstScrolledLeft = true;
+        for (let i = 0; i < animateLeftDichVu.length; i++) {
+          if (scrollTop > animateLeftDichVu[i].offsetTop - 550) {
+            animateLeftDichVu[i].classList.remove('invisible');
+            animateLeftDichVu[i].classList.add('xl:animate-fade-left-dich-vu');
+            counter();
+            firstScrolledLeft = true;
+          }
         }
         if (scrollTop > animateRightDichVu.offsetTop - 661) {
           animateRightDichVu.classList.remove('invisible');
@@ -147,43 +160,14 @@ function animateCamNhanKH(scrollTop) {
     }
   }
 }
-// tin tuc
+//   / tin tuc
 function animateTinTuc(scrollTop) {
   let mainTinTuc = document.querySelector('.the-main-tin-tuc');
-
   let isScrolled = false;
   if (!isScrolled) {
-    if (scrollTop > mainTinTuc.offsetTop - 953) {
+    if (scrollTop > mainTinTuc.offsetTop - 500) {
       mainTinTuc.classList.remove('invisible');
       mainTinTuc.classList.add('xl:animate-fade-left-dich-vu');
     }
   } isScrolled = true;
-}
-//  about page
-// section 3 - ban quan ly cua chung toi
-$('.slide-ban-quan-ly').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  mobileFirst: true,
-  dots: true,
-  customPaging: function (slider, i) {
-    return '<div class="w-2 h-2 bg-[#D9D9D9] rounded-full mt-7 md:mt-5 xl:mt-10"></div>';
-  },
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 767,
-      settings: {
-        dots: false,
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 1279,
-      settings: {
-        slidesToShow: 3,
-        variableWidth: true
-      }
-    },
-  ]
-});
+} 

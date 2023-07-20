@@ -34,15 +34,6 @@
 
 }
 
-// menu
-.animate-menu {
-    @apply translate-x-[-306px] duration-300 ease-linear transition-all;
-
-    &.fade-left-menu {
-        @apply translate-x-0;
-    }
-}
-
 .show {
     display: block;
 }
@@ -62,16 +53,8 @@
         @apply flex justify-center
     }
 
-
     .slick-slide {
         @apply px-3;
-
-        // &.active {
-        //     @apply scale-110 duration-200 ease-in-out transition-all visible opacity-100
-        // }
-        // &:hover {
-        //     @apply scale-110 delay-100 duration-200
-        // }
     }
 
     .slick-track {
@@ -85,6 +68,10 @@
     .slick-dotted.slick-slider {
         margin-bottom: 0;
     }
+
+    .draggable.slick-list {
+        @apply py-4
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -96,8 +83,6 @@
 }
 
 // tin-tuc
-
-
 .the-last-tin-tuc .border-tin-tuc {
     @apply hidden
 }
@@ -127,50 +112,11 @@
     }
 }
 
-// about page
-// slide ban quan ly cua chung toi
-.slide-ban-quan-ly {
-    .slick-dots {
-        @apply flex justify-center bottom-0 -mb-5
-    }
+#menu-contents {
+    // @apply -translate-x-[306px] transition-all duration-500 ease-out;
 
-    .slick-slide {
-        @apply mx-[58px];
-    }
-
-    .slick-track {
-        @apply flex
-    }
-
-    .slick-dots .slick-active>div {
-        @apply bg-primary-1
-    }
-
-    .slick-dotted.slick-slider {
-        @apply mb-0;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .slide-ban-quan-ly {
-        .slick-slide {
-            @apply ml-10 mr-0;
-        }
-
-        .slick-track {
-            @apply justify-center gap-[30px];
-        }
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-    .slide-ban-quan-ly {
-        .slick-slide {
-            @apply ml-8;
-        }
-
-        .slick-track {
-            @apply gap-0;
-        }
-    }
+    // &.open {
+    //     @apply -translate-x-0;
+    // }
+    animation-fill-mode: both;
 }
