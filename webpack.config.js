@@ -26,6 +26,10 @@ module.exports = {
       import: './src/js/about.js',
       filename: 'js/about.js'
     },
+    categoryDetail: {
+      import: './src/js/category-detail.js',
+      filename: 'js/category-detail.js'
+    },
   },
   output: {
     publicPath: basePath,
@@ -108,6 +112,12 @@ module.exports = {
       template: './src/views/news.html',
       inject: "body",
       chunks: ['news', 'index'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'category-detail.html',
+      template: './src/views/category-detail.html',
+      inject: "body",
+      chunks: ['categoryDetail', 'index'],
     }),
     new MiniCssExtractPlugin({
       filename: "css/[name].min.css",

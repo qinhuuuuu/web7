@@ -112,11 +112,12 @@
     }
 }
 
-#menu-contents {
-    // @apply -translate-x-[306px] transition-all duration-500 ease-out;
+#section-2 {
+    & .active.fade-left-dich-vu {
+        @apply animate-fade-left-dich-vu;
+    }
 
-    // &.open {
-    //     @apply -translate-x-0;
-    // }
-    animation-fill-mode: both;
+    & .active.fade-right-dich-vu {
+        @apply animate-fade-right-dich-vu;
+    }
 }

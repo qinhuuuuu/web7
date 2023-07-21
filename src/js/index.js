@@ -41,58 +41,63 @@ for (let i = 0; i < btnOpenTinTuc.length; i++) {
 }
 $(window).scroll(function () {
   let scrollTop = $(window).scrollTop();
-  animateDichVu(scrollTop);
+  // animateDichVu(scrollTop);
   animateCamNhanKH(scrollTop);
   animateTinTuc(scrollTop);
 });
 // dich-vu
 
-// scroll to discover
-$(function () {
-  $('.scroll-to-discover').click(function () {
-    $('html, body').animate({ scrollTop: $('#section-2').offset().top }, 'slow');
-    return false;
-  });
-});
-// $('.scroll-to-discover').click(function () {
-//   console.log(12312);
-//   $('html, body').animate({ scrollTop: $('#section-2').offset().top }, 'slow');
-// });
+// scroll & animation
+function reveal() {
+  var reveal = document.querySelectorAll('.reveal');
+  for (let i = 0; i < reveal.length; i++) {
+    let windowHeight = window.innerHeight;
+    let topElement = reveal[i].getBoundingClientRect().top;
+    // let visibleElement = 350;
+    let visibleElement = topElement > 900 ? 500 : 250;
+    if (topElement < windowHeight - visibleElement) {
+      reveal[i].classList.remove('invisible')
+      reveal[i].classList.add('active')
+    }
+  }
+}
+window.addEventListener('scroll', reveal);
+window.addEventListener('scroll', counter);
 
 // gioi-thieu
 function animateDichVu(scrollTop) {
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  let animateLeftDichVu = document.querySelector('.animate-left-dich-vu');
+  let animateRightDichVu = document.querySelector('.animate-right-dich-vu');
   let firstScrolledRight = false;
   let firstScrolledLeft = false;
-  let animateLeftDichVu = document.querySelectorAll('.animate-left-dich-vu');
-  let animateRightDichVu = document.querySelector('.animate-right-dich-vu');
   if (!firstScrolledLeft) {
     if (!firstScrolledRight) {
-      if (screenWidth > 1280) {
-        for (let i = 0; i < animateLeftDichVu.length; i++) {
-          if (scrollTop > animateLeftDichVu[i].offsetTop - 550) {
-            animateLeftDichVu[i].classList.remove('invisible');
-            animateLeftDichVu[i].classList.add('xl:animate-fade-left-dich-vu');
+      if (animateLeftDichVu) {
+        if (screenWidth > 1280) {
+          if (scrollTop > animateLeftDichVu.offsetTop - 550) {
+            animateLeftDichVu.classList.remove('invisible');
+            animateLeftDichVu.classList.add('xl:animate-fade-left-dich-vu');
             counter();
             firstScrolledLeft = true;
           }
-        }
-        if (scrollTop > animateRightDichVu.offsetTop - 661) {
-          animateRightDichVu.classList.remove('invisible');
-          animateRightDichVu.classList.add('xl:animate-fade-right-dich-vu');
-          firstScrolledRight = true;
-        }
-      } else {
-        if (scrollTop > animateLeftDichVu.offsetTop - 289) {
-          animateLeftDichVu.classList.remove('invisible');
-          animateLeftDichVu.classList.add('xl:animate-fade-left-dich-vu');
-          counter();
-          firstScrolledLeft = true;
-        }
-        if (scrollTop > animateRightDichVu.offsetTop - 400) {
-          animateRightDichVu.classList.remove('invisible');
-          animateRightDichVu.classList.add('xl:animate-fade-right-dich-vu');
-          firstScrolledRight = true;
+          if (scrollTop > animateRightDichVu.offsetTop - 661) {
+            animateRightDichVu.classList.remove('invisible');
+            animateRightDichVu.classList.add('xl:animate-fade-right-dich-vu');
+            firstScrolledRight = true;
+          }
+        } else {
+          if (scrollTop > animateLeftDichVu.offsetTop - 289) {
+            animateLeftDichVu.classList.remove('invisible');
+            animateLeftDichVu.classList.add('xl:animate-fade-left-dich-vu');
+            counter();
+            firstScrolledLeft = true;
+          }
+          if (scrollTop > animateRightDichVu.offsetTop - 400) {
+            animateRightDichVu.classList.remove('invisible');
+            animateRightDichVu.classList.add('xl:animate-fade-right-dich-vu');
+            firstScrolledRight = true;
+          }
         }
       }
     }
@@ -101,7 +106,8 @@ function animateDichVu(scrollTop) {
 
 var isCounted = false;
 function counter() {
-  if (!isCounted) {
+  let animateLeftDichVu = document.querySelector('.fade-left-dich-vu');
+  if (!isCounted && animateLeftDichVu.classList.contains('active')) {
     let counter = document.querySelectorAll(".counter");
     let arr = Array.from(counter);
     arr.map((item) => {
@@ -148,15 +154,17 @@ function animateCamNhanKH(scrollTop) {
   let itemSlideCamNhanKH = document.querySelectorAll('.item-slide-cam-nhan-khach-hang');
 
   let firstScrolledRight = false;
-  if (!firstScrolledRight) {
-    if (scrollTop > rightCamNhanKH.offsetTop - 750) {
-      rightCamNhanKH.classList.remove('invisible');
-      rightCamNhanKH.classList.add('xl:animate-fade-right-dich-vu');
-      for (let i = 0; i < itemSlideCamNhanKH.length; i++) {
-        itemSlideCamNhanKH[i].classList.remove('invisible');
-        itemSlideCamNhanKH[i].classList.add('xl:animate-move-in-up');
+  if (rightCamNhanKH) {
+    if (!firstScrolledRight) {
+      if (scrollTop > rightCamNhanKH.offsetTop - 750) {
+        rightCamNhanKH.classList.remove('invisible');
+        rightCamNhanKH.classList.add('xl:animate-fade-right-dich-vu');
+        for (let i = 0; i < itemSlideCamNhanKH.length; i++) {
+          itemSlideCamNhanKH[i].classList.remove('invisible');
+          itemSlideCamNhanKH[i].classList.add('xl:animate-move-in-up');
+        }
+        firstScrolledRight = true;
       }
-      firstScrolledRight = true;
     }
   }
 }
