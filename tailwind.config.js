@@ -196,6 +196,7 @@ module.exports = {
         'menu': '0px 4px 4px 0px rgba(20, 108, 218, 0.03)',
         'cam-nhan-khach-hang': '0px 0px 9px 0px rgba(20, 108, 218, 0.10);',
         'btn-lien-he-ngay': '0px 10px 10px 0px rgba(20, 108, 218, 0.15)',
+        'btn-gui-thong-tin': '0px 3px 20px 0px rgba(20, 108, 218, 0.52)',
       },
       backgroundImage: {
         'dich-vu': 'url("../img/home/dich-vu/bg-dich-vu.png")',

@@ -61,67 +61,30 @@ function reveal() {
 window.addEventListener('scroll', reveal);
 window.addEventListener('scroll', counter);
 
-// gioi-thieu
-function animateDichVu(scrollTop) {
-  const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  let animateLeftDichVu = document.querySelector('.animate-left-dich-vu');
-  let animateRightDichVu = document.querySelector('.animate-right-dich-vu');
-  let firstScrolledRight = false;
-  let firstScrolledLeft = false;
-  if (!firstScrolledLeft) {
-    if (!firstScrolledRight) {
-      if (animateLeftDichVu) {
-        if (screenWidth > 1280) {
-          if (scrollTop > animateLeftDichVu.offsetTop - 550) {
-            animateLeftDichVu.classList.remove('invisible');
-            animateLeftDichVu.classList.add('xl:animate-fade-left-dich-vu');
-            counter();
-            firstScrolledLeft = true;
-          }
-          if (scrollTop > animateRightDichVu.offsetTop - 661) {
-            animateRightDichVu.classList.remove('invisible');
-            animateRightDichVu.classList.add('xl:animate-fade-right-dich-vu');
-            firstScrolledRight = true;
-          }
-        } else {
-          if (scrollTop > animateLeftDichVu.offsetTop - 289) {
-            animateLeftDichVu.classList.remove('invisible');
-            animateLeftDichVu.classList.add('xl:animate-fade-left-dich-vu');
-            counter();
-            firstScrolledLeft = true;
-          }
-          if (scrollTop > animateRightDichVu.offsetTop - 400) {
-            animateRightDichVu.classList.remove('invisible');
-            animateRightDichVu.classList.add('xl:animate-fade-right-dich-vu');
-            firstScrolledRight = true;
-          }
-        }
-      }
-    }
-  }
-}
 
 var isCounted = false;
 function counter() {
   let animateLeftDichVu = document.querySelector('.fade-left-dich-vu');
-  if (!isCounted && animateLeftDichVu.classList.contains('active')) {
-    let counter = document.querySelectorAll(".counter");
-    let arr = Array.from(counter);
-    arr.map((item) => {
-      let count = item.innerHTML;
-      item.innerHTML = "";
-      let countNumber = 1;
-      function counterUP() {
-        item.innerHTML = countNumber++;
-        if (countNumber > count) {
-          clearInterval(stop);
+  if (animateLeftDichVu) {
+    if (!isCounted && animateLeftDichVu.classList.contains('active')) {
+      let counter = document.querySelectorAll(".counter");
+      let arr = Array.from(counter);
+      arr.map((item) => {
+        let count = item.innerHTML;
+        item.innerHTML = "";
+        let countNumber = 1;
+        function counterUP() {
+          item.innerHTML = countNumber++;
+          if (countNumber > count) {
+            clearInterval(stop);
+          }
+          isCounted = true;
         }
-        isCounted = true;
-      }
-      let stop = setInterval(() => {
-        counterUP();
-      }, item.dataset.speed / count);
-    });
+        let stop = setInterval(() => {
+          counterUP();
+        }, item.dataset.speed / count);
+      });
+    }
   }
 }
 

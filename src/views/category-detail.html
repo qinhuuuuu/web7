@@ -55,7 +55,7 @@
                                 </ul>
                             </li>
                             <li><a href="#" class="hover:text-primary-1">Tài liệu</a></li>
-                            <li><a href="#" class="hover:text-primary-1">Liên hệ</a></li>
+                            <li><a href="contact.html" class="hover:text-primary-1">Liên hệ</a></li>
                             <li class="hidden md:block">
                                 <div class=" items-center flex cursor-pointer dropdown-btn">
                                     <a href="#" class="">Tin tức</a>
@@ -121,7 +121,7 @@
                     </div>
                 </li>
                 <li> <a href="#" class="hover:text-primary-1">Tài liệu</a></li>
-                <li> <a href="#" class="hover:text-primary-1">Liên hệ</a></li>
+                <li> <a href="contact.html" class="hover:text-primary-1">Liên hệ</a></li>
             </ul>
         </div>
     </header>
@@ -154,9 +154,16 @@
         </section>
         <section>
             <div
-                class="px-4 mx-auto w-full flex flex-col gap-10 md:gap-[60px] xl:flex-row xl:gap-[66px] xl:max-w-7xl lg:px-2 2xl:px-0">
-                <div class="flex flex-col gap-9 md:gap-[60px] xl:w-[71.66%]">
-                    <ul class="flex flex-col gap-9 md:gap-20 xl:gap-9 xl:divide-y divide-border">
+                class="px-4 mx-auto w-full flex flex-col gap-10  md:gap-[60px] xl:flex-row xl:gap-[66px] xl:max-w-7xl lg:px-2 2xl:px-0">
+                <div class="flex flex-col xl:w-[71.66%]">
+                    <div id="result"
+                        class="hidden mb-[60px]  flex-col gap-3 text-neutral-1-900 md:mb-[100px] xl:mb-[60px]">
+                        <h2 class="text-heading-2 font-semibold">Tìm kiếm “ abc “</h2>
+                        <h6 class="text-heading-6 font-normal">Chúng tôi đã tìm thấy 24 kết quả cho cụm từ tìm kiếm của
+                            bạn
+                        </h6>
+                    </div>
+                    <ul class="list-post flex flex-col gap-9 md:gap-20 xl:gap-9 xl:divide-y divide-border">
                         <li class="flex flex-col w-full gap-[34px] ">
                             <a href="post-detail.html" class="overflow-hidden rounded">
                                 <img class="aspect-video w-full img-tin-tuc  hover:scale-110 duration-300 cursor-pointer"
@@ -243,7 +250,8 @@
                             </div>
                         </li>
                     </ul>
-                    <div class="flex gap-3 items-center w-fit mx-auto border border-border rounded-[10px] px-4 py-1.5">
+                    <div
+                        class="list-post mt-9 flex gap-3 items-center w-fit mx-auto border border-border rounded-[10px] px-4 py-1.5 md:mt-[100px] xl:mt-9">
                         <i class="twi-7-backward-line rotate-180 text-[24px] text-neutral-1-500"></i>
                         <div class="flex text-center">
                             <div class="w-10 h-10 text-primary-1 text-body-1 font-medium p-2.5">1</div>
@@ -251,7 +259,6 @@
                             <div class="w-10 h-10 text-neutral-1-500 text-body-1 font-medium p-2.5">3</div>
                             <div class="w-10 h-10 text-neutral-1-500 text-body-1 font-medium p-2.5">4</div>
                             <div class="w-10 h-10 text-neutral-1-500 text-body-1 font-medium p-2.5">5</div>
-
                         </div>
                         <i class="twi-7-backward-line text-[24px] text-primary-1"></i>
                     </div>
@@ -264,10 +271,10 @@
                         </div>
                         <div
                             class="flex py-1.5 pl-5 pr-1.5 border border-solid border-border rounded-[10px] items-center text-body-2">
-                            <input type="text"
+                            <input id="search-input" type="text"
                                 class="overflow-hidden w-full text-neutral-1-500 whitespace-nowrap font-normal"
                                 placeholder="Nội dung">
-                            <button
+                            <button id="search-post-btn"
                                 class="px-[11px] py-[5px] flex-shrink-0 bg-primary-1 text-white font-semibold rounded-lg xl:px-3 xl:py-1.5">Tìm
                                 kiếm</button>
                         </div>
@@ -405,7 +412,7 @@
                                 <a href="#" class="hover:text-primary-3 duration-300">Dự án</a>
                             </div>
                             <div>
-                                <a href="#" class="hover:text-primary-3 duration-300">Liên hệ</a>
+                                <a href="contact.html" class="hover:text-primary-3 duration-300">Liên hệ</a>
                             </div>
                         </div>
                     </div>

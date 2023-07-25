@@ -34,6 +34,10 @@ module.exports = {
       import: './src/js/post-detail.js',
       filename: 'js/post-detail.js'
     },
+    contact: {
+      import: './src/js/contact.js',
+      filename: 'js/contact.js'
+    },
   },
   output: {
     publicPath: basePath,
@@ -128,6 +132,24 @@ module.exports = {
       template: './src/views/post-detail.html',
       inject: "body",
       chunks: ['postDetail', 'index', 'about'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'contact.html',
+      template: './src/views/contact.html',
+      inject: "body",
+      chunks: ['contact', 'postDetail', 'index', 'about'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'page-not-found.html',
+      template: './src/views/page-not-found.html',
+      inject: "body",
+      chunks: ['index'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'search-post.html',
+      template: './src/views/search-post.html',
+      inject: "body",
+      chunks: ['index'],
     }),
     new MiniCssExtractPlugin({
       filename: "css/[name].min.css",
