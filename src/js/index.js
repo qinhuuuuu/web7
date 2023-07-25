@@ -16,14 +16,12 @@ menuBtn.onclick = function () {
   menuContent.classList.toggle("show");
   menuContents.classList.remove("animate-fade-right-menu");
   menuContents.classList.add("animate-fade-left-menu");
-  // menuContents.classList.add("open");
   document.body.classList.toggle("no-scroll");
 }
 var closeBtn = document.querySelector('.close');
 closeBtn.onclick = function () {
   menuContents.classList.remove("animate-fade-left-menu");
   menuContents.classList.add("animate-fade-right-menu");
-  // menuContents.classList.remove("open");
   document.body.classList.toggle("no-scroll");
 
   setTimeout(() => {
@@ -53,7 +51,6 @@ function reveal() {
   for (let i = 0; i < reveal.length; i++) {
     let windowHeight = window.innerHeight;
     let topElement = reveal[i].getBoundingClientRect().top;
-    // let visibleElement = 350;
     let visibleElement = topElement > 900 ? 500 : 250;
     if (topElement < windowHeight - visibleElement) {
       reveal[i].classList.remove('invisible')

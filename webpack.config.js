@@ -30,6 +30,10 @@ module.exports = {
       import: './src/js/category-detail.js',
       filename: 'js/category-detail.js'
     },
+    postDetail: {
+      import: './src/js/post-detail.js',
+      filename: 'js/post-detail.js'
+    },
   },
   output: {
     publicPath: basePath,
@@ -117,7 +121,13 @@ module.exports = {
       filename: 'category-detail.html',
       template: './src/views/category-detail.html',
       inject: "body",
-      chunks: ['categoryDetail', 'index'],
+      chunks: ['categoryDetail', 'index', 'about'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'post-detail.html',
+      template: './src/views/post-detail.html',
+      inject: "body",
+      chunks: ['postDetail', 'index', 'about'],
     }),
     new MiniCssExtractPlugin({
       filename: "css/[name].min.css",
